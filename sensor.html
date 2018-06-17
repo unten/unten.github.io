@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+         <meta charset="UTF-8">
+         <title>UNTEN</title>
+         <meta name="UNTEN - Ein audiovisuelles Experiment" content="Auf einer Fläche von 16m² bewegt sich das Publikum über eine computergestützte, audiovisuelle Komposition aus elektronischen Klängen und kalt-weißem Licht. Die Installation ist als ein künstlerisches Experiment zu verstehen. Untersucht wird die auditive und visuelle Wahrnehmung des Unten. Zum Einsatz kommen psychoakustische Effekte, Elektronik und minimalistische, visuelle Patterns.">
+         <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+</head>
+
+<body>
+
+<img class="background-image" src="graphics/bg6.jpg">
+
+<div class="main-navigation" id="top">
+	<ul>
+		<li><a href="ueber.html">ÜBER</a></li>
+		<li><a href="form.html">FORM</a></li>
+		<li><a href="klang.html">KLANG</a></li>
+		<li><a href="raum.html">RAUM</a></li>
+		<li><a href="sensor.html">SENSOR</a></li>
+		<li><a href="licht.html">LICHT</a></li>
+		<li><a href="kontakt.html">KONTAKT</a></li>
+	</ul>
+</div>
+
+<div class="main-content-container" id="one">
+
+	<h1>Sensorik</h1>
+
+	<p>Die Sensorik befindet sich an der Decke über der Installation und wurde von Jacob  Sello entwickelt. Sie besteht aus einer modifizierten Webcam und einem Fluter, der infrarotes Licht abgibt. Die Kamera und der Fluter erfassen und beleuchten den gesamten Boden der Installation.</p>
+
+	<p>Grundsätzlich kann eine einfache Webcam mittels Frame Subtraction als Bewegungssensor in einem Tracking-System verwendet werden. Hierfür wird ein Frame des statischen Kamerabildes gespeichert und mit jedem neu aufgenommenen Frame subtrahiert. Daraus resultiert ein schwarzes Bild, denn jeder Wert in der Videomatrix wird Null. Tritt nun an einer Position im Aufnahmebereich der Kamera eine Änderung ein – im konkreten Fall, indem eine Person die Installation betritt – ergeben sich Werte, die ungleich Null sind. Alle diese Werte werden im nächsten Schritt als Eins interpretiert und somit als weiße Silhouette vor einem schwarzen Hintergrund dargestellt. Alle weißen Bereiche werden nach ihren XY-Koordinaten in Echtzeit ausgelesen und ergeben die Anzahl und die Position der Personen im Aufnahmebereich der Kamera.</p>
+
+	<div class="content-image"><img src="graphics/sensor.png"></div>
+
+	<p>Aufgrund der wechselnden Lichtverhältnisse durch die Animationen auf dem Boden würde die Sensorik auch ohne die Anwesenheit des Publikums ständige Veränderungen registrieren. Deshalb wurde infrarotes Licht eingesetzt, dessen Wellenlängen im Spektrum über dem Bereich des sichtbaren Lichtes liegen. Damit wird sichergestellt, dass das LED-Licht für die Kamera unsichtbar bleibt und die Animationen nicht als Veränderungen im Aufnahmebereich der Kamera interpretiert werden. Hierfür wurde die Webcam mit einem Infrarotlicht-Filter ausgestattet, während der neben der Kamera angebrachte Fluter den Raum mit ausreichend Infrarotlicht ausleuchtet.</p>
+
+	<p>Die verwendete Software <a href="http://ccv.nuigroup.com/" target="_blank">Community Core Vision</a> verarbeitet das Bild der Kamera in Echtzeit und lässt diverse Feineinstellungen wie die Größe des zu registrierenden Objektes zu. Die gewonnen Daten über die Anzahl der auf der Installation befindlichen Besucher werden nun an Max/MSP gesendet und steuern dort die Presets der Instrumente.</p>
+
+</body>
+
+</html>
